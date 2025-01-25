@@ -14,6 +14,7 @@ def main():
         print(json.dumps(j, indent=2))
 
         # TODO: Make items selectable
+            # ... while True: default selection brackets [ song ] on first list item; listen for user input; update direction respectively
         for result in j["results"]:
             print(result["trackName"])
     elif len(sys.argv) > 2:
