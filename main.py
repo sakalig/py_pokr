@@ -13,12 +13,17 @@ def main():
         # For dev consumption
         print(json.dumps(j, indent=2))
 
+        # TODO: Make items selectable
         for result in j["results"]:
             print(result["trackName"])
     elif len(sys.argv) > 2:
         print("Kindly pass multiple arguments within quotes")
     else:
         pass
+
+def get_api_list():
+    print("Fetching API list")
+
 
 def getlogo():
     return """
