@@ -3,6 +3,7 @@ import requests
 import json
 
 def main():
+    # Substitute with argparse
     if len(sys.argv) == 2:
         # TODO: Process arguments to be viable search string
         print(getlogo())
