@@ -22,7 +22,7 @@ def main():
     elif len(sys.argv) > 2:
         print("Kindly pass multiple arguments within quotes")
     else:
-        pass
+        print("Usage: main.py <search_term>")
 
 def get_api_list():
     print("Fetching API list")
