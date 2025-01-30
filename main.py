@@ -10,7 +10,11 @@ def main():
         # Proceed to append
         print("Searching artists' songs...")
         # TODO: Simulate fetch request for network timeout tests
+
+        # Handle connection error
         response = requests.get("https://itunes.apple.com/search?entity=song&limit=8&term=" + sys.argv[1])
+        if not response:
+            print("Response NOT valid")
         j = response.json()
         # For dev consumption
         print(json.dumps(j, indent=2))
