@@ -2,6 +2,7 @@ import sys
 import requests
 import json
 
+# TODO: Add README.md detailing interactive navigation
 def main():
     # Substitute with argparse
     if len(sys.argv) == 2:
