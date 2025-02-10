@@ -1,5 +1,6 @@
 import sys
 from pynput.keyboard import Key, Listener
+import os
 
 # TODO: implement menu navigation using nodes
 # sample menu
@@ -41,10 +42,14 @@ def on_release(key):
     if key == Key.esc:
         print("Quitting")
         return False
+    if key == Key.enter:
+        print("Selected: " + MENU[selected])
     if key == Key.down:
         selected = selected + 1
         if selected > len(MENU) - 1:
             selected = 0
+        # screen refresh .. works on windows; TODO: test on linux/unix
+        os.system("cls")
         init_list()
 
 if __name__ == "__main__":
