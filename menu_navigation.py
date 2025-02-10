@@ -1,4 +1,5 @@
 import sys
+from pynput.keyboard import Key, Listener
 
 # sample menu
 MENU = ["One", "Two", "Three", "Four", "Five"]
@@ -16,8 +17,10 @@ def init():
     init_list()
 
     # Keystroke listener
-    while True:
-        ...
+    # while True:
+    #     ...
+    with Listener(on_press=on_press, on_release=on_release) as listener:
+        listener.join()
 
 
 def init_list():
@@ -27,6 +30,15 @@ def init_list():
             print(" ◄")
         else:
             print()
+
+def on_press(key):
+    print("Pressed ", key)
+
+def on_release(key):
+    print("Released ", key)
+    if key == Key.esc:
+        print("Quitting")
+        return False
 
 if __name__ == "__main__":
      main()
