@@ -35,10 +35,16 @@ def on_press(key):
     print("Pressed ", key)
 
 def on_release(key):
+    global selected
     print("Released ", key)
     if key == Key.esc:
         print("Quitting")
         return False
+    if key == Key.down:
+        selected = selected + 1
+        if selected > len(MENU) - 1:
+            selected = 0
+        init_list()
 
 if __name__ == "__main__":
      main()
