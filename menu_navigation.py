@@ -1,6 +1,7 @@
 import sys
 from pynput.keyboard import Key, Listener
 import os
+import logging
 
 # TODO: implement menu navigation using nodes
 # sample menu
@@ -8,7 +9,10 @@ MENU = ["One", "Two", "Three", "Four", "Five"]
 selected = 0
 
 def main():
-     init()
+     # init logging module; TODO: add date suffix
+    logging.basicConfig(filename="logs_navigation", filemode="a", format="%(asctime)s,%(msecs)03d %(name)s %(levelname)s %(message)s", datefmt="%Y-%m-%d %H:%M:%S", level=logging.DEBUG)
+
+    init()
      
 def init():
     # screen refresh .. works on windows; TODO: test on linux/unix
@@ -37,11 +41,14 @@ def init_list():
             print()
 
 def on_press(key):
-    print("Pressed ", key)
+    ...
+    #logging.info("Pressed " + key)
+    #print("Pressed ", key)
 
 def on_release(key):
     global selected
-    print("Released ", key)
+    #logging.info("Released " + key)
+    #print("Released ", key)
     if key == Key.esc:
         print("Quitting")
         return False
