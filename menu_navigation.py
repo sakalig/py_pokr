@@ -1,6 +1,7 @@
 import sys
 from pynput.keyboard import Key, Listener
 
+# TODO: implement menu navigation using nodes
 # sample menu
 MENU = ["One", "Two", "Three", "Four", "Five"]
 selected = 0
