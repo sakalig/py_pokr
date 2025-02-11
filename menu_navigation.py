@@ -20,9 +20,6 @@ def init():
 
     print("Press ▲(Up) or ▼(Down) to navigate")
 
-    #current_list = MENU
-    #print(current_list)
-
     init_list()
 
     # Keystroke listener
