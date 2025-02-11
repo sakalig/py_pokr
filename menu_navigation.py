@@ -93,13 +93,13 @@ def on_release(key):
         platform_clear(PLATFORM)
         #os.system("cls")
         init_list()
-    elif key == Key.Up:
-        selected = selected - 1
-        if selected == 0:
-            selected = len(MENU) - 1
-        platform_clear(PLATFORM)
-        #os.system("cls")
-        init_list()
+    # elif key == Key.Up:
+    #     selected = selected - 1
+    #     if selected == 0:
+    #         selected = len(MENU) - 1
+    #     platform_clear(PLATFORM)
+    #     #os.system("cls")
+    #     init_list()
 
 if __name__ == "__main__":
      main()
