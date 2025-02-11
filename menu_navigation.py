@@ -18,13 +18,13 @@ def main():
     # TODO: log platform
     if platform == "linux":
         PLATFORM = "LINUX"
-        #print(PLATFORM)
+        print(PLATFORM)
     elif platform == "win32":
         PLATFORM = "WINDOWS"
-        #print(PLATFORM)
+        print(PLATFORM)
     elif platform == "unix":
         PLATFORM = "UNIX"
-        #print(PLATFORM)
+        print(PLATFORM)
     
     init()
      
