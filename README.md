@@ -2,8 +2,8 @@
 Abstracts over as many consumed APIs as possible (eventually...)
 
 ## System Architecture
-- [*] Core
-- [*] Menu Navigation
+- [+] Core
+- [+] Menu Navigation
 - [ ] Generalizer (Soon)
 
 ## Breakdown
