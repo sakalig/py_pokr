@@ -58,7 +58,6 @@ def init_list():
             print()
 
 def platform_clear(PLATFORM):
-    print("Platform: " + PLATFORM)
     match PLATFORM:
         case "LINUX":
             os.system("printf \033c")
