@@ -15,6 +15,8 @@ def main():
      # init logging module; TODO: add date suffix
     #logging.basicConfig(filename="logs/logs_navigation.txt", filemode="a", format="%(asctime)s,%(msecs)03d %(name)s %(levelname)s %(message)s", datefmt="%Y-%m-%d %H:%M:%S", level=logging.DEBUG)
 
+    global PLATFORM
+
     # TODO: log platform
     if platform == "linux":
         PLATFORM = "LINUX"
@@ -30,13 +32,9 @@ def main():
      
 def init():
     # screen refresh .. works on windows; TODO: test on linux/unix
-    if PLATFORM == "LINUX":
-        #os.system("printf \'\\033c\'")
-        os.system("printf \033c")
-        platform_clear(PLATFORM)
-    elif PLATFORM == "WINDOWS":
-        platform_clear(PLATFORM)
-        #os.system("cls")
+    print("Platform: " + PLATFORM)
+    platform_clear(PLATFORM)
+        
     
     print("Press ▲(Up) or ▼(Down) to navigate")
 
@@ -58,6 +56,7 @@ def init_list():
             print()
 
 def platform_clear(PLATFORM):
+    print("Platform: " + PLATFORM)
     match PLATFORM:
         case "LINUX":
             os.system("printf \033c")
