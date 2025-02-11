@@ -8,13 +8,13 @@ Abstracts over as many consumed APIs as possible (eventually...)
 
 ## Breakdown
 ### Core
-Ingress of response traffic (to be eventually deferred to a stand-alone network-handling module)
+Ingress of response traffic (to be eventually deferred to a stand-alone, network-handling module)\
 This is accompanied by the resultant error handling on timed-out requests
 
 The initial enumeration of the parsed result occurs here, till more sophistication is introduced.
 
 ### Menu Navigation
-PyPokr is designed to be as interactive as possible. At least as much as a CLI can allow.
+PyPokr is designed to be as interactive as possible. At least as much as a CLI can allow.\
 A full graphical redesign shall occur after the rudimentary rendering has been ironed out. Candidates to include Qt5.
 
 For HCI simplicity, the labels have relied on the following iconography: 
