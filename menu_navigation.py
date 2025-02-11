@@ -10,7 +10,7 @@ selected = 0
 
 def main():
      # init logging module; TODO: add date suffix
-    logging.basicConfig(filename="logs_navigation", filemode="a", format="%(asctime)s,%(msecs)03d %(name)s %(levelname)s %(message)s", datefmt="%Y-%m-%d %H:%M:%S", level=logging.DEBUG)
+    logging.basicConfig(filename="logs/logs_navigation.txt", filemode="a", format="%(asctime)s,%(msecs)03d %(name)s %(levelname)s %(message)s", datefmt="%Y-%m-%d %H:%M:%S", level=logging.DEBUG)
 
     init()
      
