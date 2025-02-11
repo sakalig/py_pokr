@@ -19,7 +19,7 @@ def main():
     if platform == "linux":
         PLATFORM = "LINUX"
         #print(PLATFORM)
-    elif platform == "windows":
+    elif platform == "win32":
         PLATFORM = "WINDOWS"
         #print(PLATFORM)
     elif platform == "unix":
