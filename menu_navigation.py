@@ -32,8 +32,10 @@ def main():
      
 def init():
     # screen refresh .. works on windows; TODO: test on linux/unix
-    print("Platform: " + PLATFORM)
-    platform_clear(PLATFORM)
+    
+    # TODO: Log platform info
+    #print("Platform: " + PLATFORM)
+    #platform_clear(PLATFORM)
         
     
     print("Press ▲(Up) or ▼(Down) to navigate")
