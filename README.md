@@ -24,5 +24,12 @@ For HCI simplicity, the labels have relied on the following iconography:
 
 The currently selected option is highlighted with a ◄ icon
 
+#### Linux platforms
+```bash
+^[[B
+```
+Navigation may present the following characters on your shell.\
+This means there is a delay on refreshing after a key press has been logged 
+
 ### Generalizer
 Since the program will be designed to consume responses from as many APIs as possible, abstraction over the content is handled here
