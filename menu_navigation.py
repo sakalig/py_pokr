@@ -1,23 +1,43 @@
 import sys
+from sys import platform
 from pynput.keyboard import Key, Listener
 import os
 import logging
 
+
 # TODO: implement menu navigation using nodes
 # sample menu
 MENU = ["One", "Two", "Three", "Four", "Five"]
+PLATFORM = ""
 selected = 0
 
 def main():
      # init logging module; TODO: add date suffix
     #logging.basicConfig(filename="logs/logs_navigation.txt", filemode="a", format="%(asctime)s,%(msecs)03d %(name)s %(levelname)s %(message)s", datefmt="%Y-%m-%d %H:%M:%S", level=logging.DEBUG)
 
+    # TODO: log platform
+    if platform == "linux":
+        PLATFORM = "LINUX"
+        #print(PLATFORM)
+    elif platform == "windows":
+        PLATFORM = "WINDOWS"
+        #print(PLATFORM)
+    elif platform == "unix":
+        PLATFORM = "UNIX"
+        #print(PLATFORM)
+    
     init()
      
 def init():
     # screen refresh .. works on windows; TODO: test on linux/unix
-    os.system("cls")
-
+    if PLATFORM == "LINUX":
+        #os.system("printf \'\\033c\'")
+        os.system("printf \033c")
+        platform_clear(PLATFORM)
+    elif PLATFORM == "WINDOWS":
+        platform_clear(PLATFORM)
+        #os.system("cls")
+    
     print("Press ▲(Up) or ▼(Down) to navigate")
 
     init_list()
@@ -37,6 +57,21 @@ def init_list():
         else:
             print()
 
+def platform_clear(PLATFORM):
+    match PLATFORM:
+        case "LINUX":
+            os.system("printf \033c")
+            
+        case "UNIX":
+            os.system("printf \'\\033c\'")
+            
+        case "WINDOWS":
+            os.system("cls")
+            
+        case default:
+            print("Platform undetected")
+            # throw error (Custom/Platform error)
+
 def on_press(key):
     ...
     #logging.info("Pressed " + key)
@@ -55,13 +90,15 @@ def on_release(key):
         selected = selected + 1
         if selected > len(MENU) - 1:
             selected = 0
-        os.system("cls")
+        platform_clear(PLATFORM)
+        #os.system("cls")
         init_list()
     if key == Key.Up:
         selected = selected - 1
         if selected == 0:
             selected = len(MENU) - 1
-        os.system("cls")
+        platform_clear(PLATFORM)
+        #os.system("cls")
         init_list()
 
 if __name__ == "__main__":
