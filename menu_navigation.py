@@ -35,9 +35,9 @@ def init():
     
     # TODO: Log platform info
     #print("Platform: " + PLATFORM)
-    #platform_clear(PLATFORM)
-        
     
+    platform_clear(PLATFORM)
+        
     print("Press ▲(Up) or ▼(Down) to navigate")
 
     init_list()
@@ -71,6 +71,11 @@ def platform_clear(PLATFORM):
         case default:
             print("Platform undetected")
             # throw error (Custom/Platform error)
+
+def border_draw():
+    w, h = os.get_terminal_size()
+    for i in range(w):
+        print("=")
 
 def on_press(key):
     ...
