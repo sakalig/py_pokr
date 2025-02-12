@@ -7,7 +7,7 @@ def main():
     # Substitute with argparse
     if len(sys.argv) == 2:
         # TODO: Process arguments to be viable search string
-        print(getlogo())
+        print(get_logo())
         # Proceed to append
         print("Searching artists' songs...")
         # TODO: Simulate fetch request for network timeout tests

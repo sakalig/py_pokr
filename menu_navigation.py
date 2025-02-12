@@ -3,7 +3,7 @@ from sys import platform
 from pynput.keyboard import Key, Listener
 import os
 import logging
-
+from .main import get_logo
 
 # TODO: implement menu navigation using nodes
 # sample menu
@@ -31,7 +31,7 @@ def main():
     init()
      
 def init():
-    # screen refresh .. works on windows; TODO: test on linux/unix
+    # TODO: test screen refresh on linux/unix
 
     init_list()
 
@@ -73,6 +73,9 @@ def platform_clear(PLATFORM):
 
 def border_draw():
     w, h = os.get_terminal_size()
+
+    print(get_logo)
+
     for i in range(w):
         print("=", end="")
 
