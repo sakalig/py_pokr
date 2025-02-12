@@ -32,13 +32,6 @@ def main():
      
 def init():
     # screen refresh .. works on windows; TODO: test on linux/unix
-    
-    # TODO: Log platform info
-    #print("Platform: " + PLATFORM)
-    
-    platform_clear(PLATFORM)
-        
-    print("Press ▲(Up) or ▼(Down) to navigate")
 
     init_list()
 
@@ -50,6 +43,12 @@ def init():
 
 
 def init_list():
+    border_draw()
+    # TODO: Log platform info
+    platform_clear(PLATFORM)
+
+    print("Press ▲(Up) or ▼(Down) to navigate")
+
     for i in range(len(MENU)):
         print(MENU[i], end="")
         if i == selected:
@@ -75,7 +74,7 @@ def platform_clear(PLATFORM):
 def border_draw():
     w, h = os.get_terminal_size()
     for i in range(w):
-        print("=")
+        print("=", end="")
 
 def on_press(key):
     ...
