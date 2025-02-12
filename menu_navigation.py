@@ -3,7 +3,8 @@ from sys import platform
 from pynput.keyboard import Key, Listener
 import os
 import logging
-from .main import get_logo
+from graphics import get_logo
+
 
 # TODO: implement menu navigation using nodes
 # sample menu
@@ -47,6 +48,8 @@ def init_list():
     # TODO: Log platform info
     platform_clear(PLATFORM)
 
+    print(get_logo())
+
     print("Press ▲(Up) or ▼(Down) to navigate")
 
     for i in range(len(MENU)):
@@ -74,10 +77,9 @@ def platform_clear(PLATFORM):
 def border_draw():
     w, h = os.get_terminal_size()
 
-    print(get_logo)
-
     for i in range(w):
         print("=", end="")
+    
 
 def on_press(key):
     ...

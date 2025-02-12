@@ -1,6 +1,7 @@
 import sys
 import requests
 import json
+from graphics import get_logo
 
 # TODO: Add README.md detailing interactive navigation
 def main():
@@ -32,15 +33,6 @@ def main():
 def get_api_list():
     print("Fetching API list")
 
-
-def get_logo():
-    return """
- ____        ____       _         
-|  _ \ _   _|  _ \ ___ | | ___ __ 
-| |_) | | | | |_) / _ \| |/ / '__|
-|  __/| |_| |  __/ (_) |   <| |   
-|_|    \__, |_|   \___/|_|\_\_|   
-       |___/                      """
 
 if __name__ == "__main__":
     main()
