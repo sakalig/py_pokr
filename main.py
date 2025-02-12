@@ -33,7 +33,7 @@ def get_api_list():
     print("Fetching API list")
 
 
-def getlogo():
+def get_logo():
     return """
  ____        ____       _         
 |  _ \ _   _|  _ \ ___ | | ___ __ 
