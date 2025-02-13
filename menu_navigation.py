@@ -3,7 +3,7 @@ from sys import platform
 from pynput.keyboard import Key, Listener
 import os
 import logging
-from graphics import get_logo
+from constants import get_logo
 
 
 # TODO: implement menu navigation using nodes

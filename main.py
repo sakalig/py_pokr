@@ -1,7 +1,7 @@
 import sys
 import requests
 import json
-from graphics import get_logo
+from constants import get_logo
 
 # TODO: Add README.md detailing interactive navigation
 def main():
