@@ -1,14 +1,14 @@
 import sys
 import requests
 import json
-from constants import get_logo
+from constants import get_logo, get_version
 
 # TODO: Add README.md detailing interactive navigation
 def main():
     # Substitute with argparse
     if len(sys.argv) == 2:
         # TODO: Process arguments to be viable search string
-        print(get_logo())
+        print(get_logo() + " v" + get_version())
         # Proceed to append
         print("Searching artists' songs...")
         # TODO: Simulate fetch request for network timeout tests
