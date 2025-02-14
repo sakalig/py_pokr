@@ -101,7 +101,12 @@ def on_release(key):
             if selected > len(MENU) - 1:
                 selected = 0
             platform_clear(PLATFORM)
-            #os.system("cls")
+            init_list()
+        case Key.up:
+            selected = selected - 1
+            if selected == -1:
+                selected = len(MENU) - 1
+            platform_clear(PLATFORM)
             init_list()
     #elif key == 
         
