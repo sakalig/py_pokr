@@ -90,18 +90,23 @@ def on_release(key):
     global selected
     #logging.info("Released " + key)
     #print("Released ", key)
-    if key == Key.esc:
-        print("Quitting")
-        return False
-    elif key == Key.enter:
-        print("Selected: " + MENU[selected])
-    elif key == Key.down:
-        selected = selected + 1
-        if selected > len(MENU) - 1:
-            selected = 0
-        platform_clear(PLATFORM)
-        #os.system("cls")
-        init_list()
+    match(key):
+        case Key.esc:
+            print("Quitting")
+            return False
+        case Key.enter:
+            print("Selected: " + MENU[selected])
+        case Key.down:
+            selected = selected + 1
+            if selected > len(MENU) - 1:
+                selected = 0
+            platform_clear(PLATFORM)
+            #os.system("cls")
+            init_list()
+    #elif key == 
+        
+    #elif key == 
+        
     # elif key == Key.Up:
     #     selected = selected - 1
     #     if selected == 0:
