@@ -3,7 +3,7 @@ import requests
 import json
 from constants import get_logo, get_version
 
-# TODO: Add README.md detailing interactive navigation
+
 def main():
     # Substitute with argparse
     if len(sys.argv) == 2:
